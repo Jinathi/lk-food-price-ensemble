@@ -12,7 +12,7 @@
 - **Stacking:** forward-chaining base-model predictions with a nonnegative Ridge meta-model
 - **Hybrids (additional exploration):** RF + national ARIMA residual model; RF + ANN average
 
-All models target the **one-month log-price change**; error metrics are calculated on prices in **LKR per the commodity's reported selling unit** (mainly KG; some items are sold per Unit). Do **not** interpret the aggregate MAE as LKR/kg for every commodity.
+All models target the **one-month log-price change**; error metrics are calculated on prices in **LKR per the commodity's reported selling unit** (mainly KG; some items are sold per Unit). Since food items are sold in different units (such as kilograms or individual items), the overall MAE is reported in LKR per prediction, rather than LKR/kg for every food item.
 
 ## Run on your computer
 
@@ -34,14 +34,14 @@ All models target the **one-month log-price change**; error metrics are calculat
 
    The dashboard reads the included **trained** `models/models.joblib` and all saved result files; you do not need to retrain to launch it.
 
-5. **To retrain:** run every notebook cell top-to-bottom **from this directory**, with `foodprice.py` next to the notebook. The notebook creates `figs/` and updates all of `models/` together. Training may take several minutes. Do not submit a mix of old model files and new preprocessing code.
+5. **To retrain:** run every notebook cell top-to-bottom **from this directory**, with `foodprice.py` next to the notebook. The notebook creates `figs/` and updates all of `models/` together.
 
 6. Optionally run `python validate_project.py` for a quick integrity check of the supplied models and result tables.
 
 ## Project structure
 
 ```text
-ML-Assignment 1/
+224107M_ML Assignment 1/
 ├── Food_Price_Ensemble_Learning.ipynb   # required notebook: code, training, comparison, interpretation
 ├── foodprice.py                        # reusable data pipeline, models, metrics
 ├── app.py                              # Streamlit interface
@@ -51,8 +51,6 @@ ML-Assignment 1/
 ├── requirements.txt                    # Python dependencies
 ├── validate_project.py                 # optional verification script
 ```
-
-**Multiple source files are intentional.** The lecturer asks for Python notebooks and a dashboard; a notebook may import its helper module, and an application may have its own entry point. Include all three source files together.
 
 ## Methodology and limitations
 
