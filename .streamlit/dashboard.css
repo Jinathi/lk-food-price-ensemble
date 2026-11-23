@@ -1,0 +1,79 @@
+.stMainBlockContainer {
+    max-width: 84rem;
+    padding-inline: clamp(1.25rem, 4vw, 4rem);
+}
+
+.st-key-dashboard-heading {
+    padding: clamp(1.25rem, 3vw, 2.5rem) clamp(1.25rem, 3vw, 2.5rem) 1.5rem;
+    background: linear-gradient(115deg, #E8F0E4, #F0F3E9);
+    border: 1px solid #DCE4DA;
+    border-radius: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.st-key-dashboard-heading h1 {
+    font-size: clamp(1.9rem, 3.6vw, 3.25rem);
+    letter-spacing: -0.035em;
+    line-height: 1.12;
+    padding: 0;
+}
+
+[data-testid="stSidebar"] [data-testid="stWidgetLabel"] p {
+    color: #405B4C;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+}
+
+[data-testid="stSidebar"] [role="radiogroup"] {
+    gap: 0.3rem;
+}
+
+[data-testid="stSidebar"] label[data-baseweb="radio"] {
+    margin: 0;
+    padding: 0.55rem 0.7rem;
+    border: 1px solid transparent;
+    border-radius: 0.65rem;
+}
+
+[data-testid="stSidebar"] label[data-baseweb="radio"]:hover {
+    background: #E4EBE0;
+}
+
+[data-testid="stSidebar"] label[data-baseweb="radio"]:has(input:checked) {
+    background: #DBE9DA;
+    border-color: #CDDCCB;
+    font-weight: 600;
+}
+
+[data-testid="stMetric"],
+.st-key-overview-notes {
+    background: #FFFFFF;
+    border: 1px solid #DCE4DA;
+    border-radius: 0.85rem;
+}
+
+[data-testid="stMetric"] {
+    min-height: 8.25rem;
+    padding: 1rem;
+}
+
+[data-testid="stMetricLabel"] p {
+    color: #405B4C;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.st-key-overview-notes {
+    padding: clamp(1.15rem, 2.6vw, 2rem);
+}
+
+.st-key-overview-notes p {
+    line-height: 1.65;
+}
+
+.st-key-overview-notes p:last-child,
+.st-key-dashboard-heading p:last-child {
+    margin-bottom: 0;
+}

@@ -1,0 +1,1 @@
+{"best": "Random Forest", "stack_weights": {"Random Forest": 0.096, "XGBoost": 0.171, "CatBoost": 0.0, "Ridge": 0.082}, "ci": [-5.657032577019862, 8.387452368967576], "gain": 1.236792965718804, "series_average_gain": 0.27826968446105976, "bootstrap_unit": "month (six months; exploratory)"}
